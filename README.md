@@ -1,6 +1,6 @@
-# Model Atlas
+# Frenzel API List
 
-Model Atlas is a React + TypeScript model selector built for the Freznel assessment. It loads the hosted Hugging Face model index, searches by name, family, and author, filters by tags and safetensor count, and sorts by name or file count.
+Frenzel API List is a React + TypeScript model selector built for the Freznel assessment. It loads the hosted Hugging Face model index, searches by name, family, and author, filters by tags and safetensor count, and sorts by name or file count.
 
 ## Run locally
 

@@ -174,7 +174,7 @@ function App() {
       <header className="topbar">
         <div className="brand">
           <span className="brand-mark">M</span>
-          <span>Model Atlas</span>
+          <span>Frenzel API List</span>
         </div>
         <div className={`connection ${offlineMode ? "is-offline" : ""}`}>
           {offlineMode ? <WifiOff size={15} /> : <Wifi size={15} />}

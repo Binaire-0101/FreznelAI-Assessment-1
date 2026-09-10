@@ -76,7 +76,7 @@ export function AuthenticationScreen({
       </div>
 
       <form className="auth-card" onSubmit={handleSubmit}>
-        <span className="eyebrow">MODEL ATLAS</span>
+        <span className="eyebrow">FRENZEL API LIST</span>
         <h2>{mode === "signin" ? "Welcome back" : "Create your account"}</h2>
         <p className="muted">
           {mode === "signin"
