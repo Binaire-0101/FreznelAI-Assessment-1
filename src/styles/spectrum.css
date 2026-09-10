@@ -1,0 +1,310 @@
+/* Adobe Spectrum CSS Design System Tokens */
+:root {
+  /* Adobe Spectrum Dark Theme Colors */
+  --spectrum-global-color-gray-50: #0d0d0d;
+  --spectrum-global-color-gray-100: #141414;
+  --spectrum-global-color-gray-200: #1e1e1e;
+  --spectrum-global-color-gray-300: #292929;
+  --spectrum-global-color-gray-400: #3b3b3b;
+  --spectrum-global-color-gray-500: #545454;
+  --spectrum-global-color-gray-600: #767676;
+  --spectrum-global-color-gray-700: #999999;
+  --spectrum-global-color-gray-800: #c8c8c8;
+  --spectrum-global-color-gray-900: #ffffff;
+
+  /* Adobe Spectrum Accent Colors */
+  --spectrum-accent-color-100: #0265dc;
+  --spectrum-accent-color-200: #1473e6;
+  --spectrum-accent-color-300: #2680eb;
+  --spectrum-accent-color-400: #378ef0;
+  
+  /* Status Colors */
+  --spectrum-semantic-positive: #2d9d78;
+  --spectrum-semantic-notice: #e68619;
+  --spectrum-semantic-negative: #e34850;
+  --spectrum-semantic-informative: #1473e6;
+
+  /* Typography */
+  --spectrum-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --spectrum-code-font: 'Source Code Pro', monospace;
+
+  /* Layout & Elevations */
+  --spectrum-border-radius: 6px;
+  --spectrum-card-radius: 10px;
+  --spectrum-elevation-1: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --spectrum-elevation-2: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --spectrum-elevation-3: 0 16px 48px rgba(0, 0, 0, 0.65);
+
+  --spectrum-transition-fast: 0.15s cubic-bezier(0, 0, 0.2, 1);
+  --spectrum-transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Variables Override */
+.spectrum--light {
+  --spectrum-global-color-gray-50: #f8f9fa;
+  --spectrum-global-color-gray-100: #f1f3f5;
+  --spectrum-global-color-gray-200: #e9ecef;
+  --spectrum-global-color-gray-300: #dee2e6;
+  --spectrum-global-color-gray-400: #ced4da;
+  --spectrum-global-color-gray-500: #adb5bd;
+  --spectrum-global-color-gray-600: #6c757d;
+  --spectrum-global-color-gray-700: #495057;
+  --spectrum-global-color-gray-800: #343a40;
+  --spectrum-global-color-gray-900: #212529;
+
+  --spectrum-elevation-1: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --spectrum-elevation-2: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --spectrum-elevation-3: 0 16px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* Base Document Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--spectrum-global-color-gray-50);
+  color: var(--spectrum-global-color-gray-900);
+  font-family: var(--spectrum-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Adobe Spectrum Buttons */
+.spectrum-Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--spectrum-border-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--spectrum-transition-fast);
+  text-decoration: none;
+  user-select: none;
+}
+
+.spectrum-Button--accent {
+  background-color: var(--spectrum-accent-color-200);
+  color: #ffffff;
+}
+
+.spectrum-Button--accent:hover {
+  background-color: var(--spectrum-accent-color-300);
+  box-shadow: 0 4px 12px rgba(20, 115, 230, 0.4);
+}
+
+.spectrum-Button--secondary {
+  background-color: var(--spectrum-global-color-gray-300);
+  color: var(--spectrum-global-color-gray-900);
+  border-color: var(--spectrum-global-color-gray-400);
+}
+
+.spectrum-Button--secondary:hover {
+  background-color: var(--spectrum-global-color-gray-400);
+}
+
+.spectrum-Button--quiet {
+  background-color: transparent;
+  color: var(--spectrum-global-color-gray-800);
+}
+
+.spectrum-Button--quiet:hover {
+  background-color: var(--spectrum-global-color-gray-200);
+  color: var(--spectrum-global-color-gray-900);
+}
+
+/* Adobe Spectrum Form Fields */
+.spectrum-Textfield {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.spectrum-Textfield-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 14px;
+  background-color: var(--spectrum-global-color-gray-100);
+  border: 1px solid var(--spectrum-global-color-gray-400);
+  border-radius: var(--spectrum-border-radius);
+  color: var(--spectrum-global-color-gray-900);
+  font-family: var(--spectrum-font-family);
+  font-size: 14px;
+  outline: none;
+  transition: border-color var(--spectrum-transition-fast), box-shadow var(--spectrum-transition-fast);
+}
+
+.spectrum-Textfield-input:focus {
+  border-color: var(--spectrum-accent-color-200);
+  box-shadow: 0 0 0 2px rgba(20, 115, 230, 0.3);
+}
+
+/* Adobe Spectrum Card Components */
+.spectrum-Card {
+  background-color: var(--spectrum-global-color-gray-100);
+  border: 1px solid var(--spectrum-global-color-gray-300);
+  border-radius: var(--spectrum-card-radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--spectrum-elevation-1);
+  transition: transform var(--spectrum-transition-smooth), box-shadow var(--spectrum-transition-smooth), border-color var(--spectrum-transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.spectrum-Card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--spectrum-elevation-2);
+  border-color: var(--spectrum-accent-color-200);
+}
+
+.spectrum-Card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.spectrum-Card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--spectrum-global-color-gray-900);
+  word-break: break-word;
+}
+
+.spectrum-Card-subtitle {
+  font-size: 12px;
+  color: var(--spectrum-global-color-gray-600);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.spectrum-Card-description {
+  font-size: 13px;
+  color: var(--spectrum-global-color-gray-700);
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Adobe Spectrum Tag Badges */
+.spectrum-Tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: var(--spectrum-global-color-gray-300);
+  color: var(--spectrum-global-color-gray-800);
+  text-transform: lowercase;
+}
+
+.spectrum-Tag--blue {
+  background-color: rgba(20, 115, 230, 0.18);
+  color: #378ef0;
+}
+
+.spectrum-Tag--green {
+  background-color: rgba(45, 157, 120, 0.18);
+  color: #2d9d78;
+}
+
+.spectrum-Tag--orange {
+  background-color: rgba(230, 134, 25, 0.18);
+  color: #e68619;
+}
+
+/* Spectrum Status Light */
+.spectrum-StatusLight {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.spectrum-StatusLight-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.spectrum-StatusLight--positive .spectrum-StatusLight-dot {
+  background-color: var(--spectrum-semantic-positive);
+  box-shadow: 0 0 8px var(--spectrum-semantic-positive);
+}
+
+.spectrum-StatusLight--negative .spectrum-StatusLight-dot {
+  background-color: var(--spectrum-semantic-negative);
+  box-shadow: 0 0 8px var(--spectrum-semantic-negative);
+}
+
+/* Spectrum Modal Backdrop */
+.spectrum-Modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn var(--spectrum-transition-fast);
+}
+
+.spectrum-Dialog {
+  background-color: var(--spectrum-global-color-100);
+  border: 1px solid var(--spectrum-global-color-300);
+  border-radius: var(--spectrum-card-radius);
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+  box-shadow: var(--spectrum-elevation-3);
+  animation: slideUp var(--spectrum-transition-smooth);
+}
+
+/* Dynamic Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
