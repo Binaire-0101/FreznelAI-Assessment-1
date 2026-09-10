@@ -1,0 +1,6 @@
+{
+  "name": "Model Selection Utility",
+  "description": "Minimal, technical AI model selection utility with search, multi-tag filtering, offline cache, and background sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

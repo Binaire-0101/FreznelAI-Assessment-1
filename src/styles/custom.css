@@ -1,0 +1,161 @@
+/**
+ * Custom CSS for layout, high-contrast engineering aesthetic, and dark mode support.
+ * Binaire Freznel AI - Minimalist Technical Design System (Dark Theme Only).
+ */
+
+:root {
+  --bg-primary: #0e0e0e;
+  --bg-secondary: #161616;
+  --bg-dark: #080808;
+  --bg-dark-subtle: #121212;
+  --text-primary: #f0f0f0;
+  --text-secondary: #9c9c9c;
+  --text-muted: #6b6b6b;
+  --border-subtle: #242424;
+  --border-strong: #3d3d3d;
+  --accent-active: #ffffff;
+  --status-online: #10b981;
+  --status-offline: #ef4444;
+  --status-syncing: #f59e0b;
+  color-scheme: dark;
+}
+
+.dark {
+  --bg-primary: #0e0e0e;
+  --bg-secondary: #161616;
+  --bg-dark: #080808;
+  --bg-dark-subtle: #121212;
+  --text-primary: #f0f0f0;
+  --text-secondary: #9c9c9c;
+  --text-muted: #6b6b6b;
+  --border-subtle: #242424;
+  --border-strong: #3d3d3d;
+  --accent-active: #ffffff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  color-scheme: dark;
+}
+
+/* Engineering code & mono typography */
+.font-mono {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Technical clean borders */
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+.border-subtle-b {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.border-subtle-r {
+  border-right: 1px solid var(--border-subtle);
+}
+
+.border-subtle-t {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Subtle transitions adhering to 150-250ms rule */
+.transition-smooth {
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom interactive model card styling complementing Spectrum */
+.bf-model-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.bf-model-card:hover {
+  border-color: #484848;
+  transform: translateY(-1px);
+}
+
+.bf-model-card.is-selected {
+  border: 2px solid #ffffff;
+  background: var(--bg-secondary);
+}
+
+/* Minimalist technical badges */
+.bf-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.bf-badge-dark {
+  background: #ffffff;
+  color: #0e0e0e;
+  border: 1px solid #ffffff;
+  font-weight: 700;
+}
+
+.bf-badge-accent {
+  background: #1f1f1f;
+  color: #e2e2e2;
+  border: 1px solid #363636;
+}
+
+select, option {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Responsive display utilities */
+@media (min-width: 768px) {
+  .md\:block {
+    display: block !important;
+  }
+  .md\:hidden {
+    display: none !important;
+  }
+}
