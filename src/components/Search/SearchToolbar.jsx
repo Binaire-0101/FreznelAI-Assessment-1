@@ -27,7 +27,7 @@ export function SearchToolbar({
       <Flex gap="size-150" wrap alignItems="end" UNSAFE_className="toolbar__row">
         <SearchField
           label="Search models"
-          description="Matches from the start or the middle of a value."
+          description="Try llama, qwen, whisper — matches from the start or the middle of a value."
           value={value}
           onChange={onQueryChange}
           onSubmit={onQuerySubmit}
@@ -35,7 +35,6 @@ export function SearchToolbar({
           width="100%"
           maxWidth="size-4600"
           UNSAFE_className="toolbar__search"
-          placeholder="llama, qwen, whisper, stable-diffusion…"
         />
 
         <Picker

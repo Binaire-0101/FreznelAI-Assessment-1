@@ -3,9 +3,10 @@
  *
  * Everything asynchronous in this file is expressed with explicit Promise
  * composition (`new Promise`, `.then`, `.catch`, recursion over a pump
- * function). See `docs/ARCHITECTURE.md` for the reasoning; the short version is
- * that `async/await` is only syntax sugar over exactly these primitives, so any
- * awaited program can be rewritten as a chain of continuations.
+ * function). See the README section "Question 9.1" for the full reasoning; the
+ * short version is that `async`/`await` is only syntax sugar over exactly these
+ * primitives, so any awaited program can be rewritten as a chain of
+ * continuations.
  *
  * The client also owns the download-integrity guarantees:
  *  - a hard timeout per attempt (AbortController)
