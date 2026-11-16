@@ -1,0 +1,15 @@
+{
+  "name": "react-native-assessment",
+  "version": "1.0.0",
+  "description": "Use this template for making the assessment for Freznel AI.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "frzdynamo": "^1.0.18"
+  }
+}
