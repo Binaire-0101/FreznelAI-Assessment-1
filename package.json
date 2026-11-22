@@ -1,0 +1,7 @@
+{
+  "name": "binaire-freznelai-assessment",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix ./JS-TS-Dev start"
+  }
+}
