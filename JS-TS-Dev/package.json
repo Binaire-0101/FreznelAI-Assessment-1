@@ -4,12 +4,20 @@
   "description": "Use this template for making the assessment for Freznel AI.",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "eslint.config.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "frzdynamo": "^1.0.18"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.1",
+    "dotenv": "^18.0.10",
+    "firebase": "^13.4.0",
+    "systeminformation": "^5.33.23"
   }
 }

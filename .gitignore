@@ -1,0 +1,31 @@
+# Dependencies and locks
+node_modules/
+package-lock.json
+npm-shrinkwrap.json
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and debug
+logs/
+*.log
+npm-debug.log*
+
+# Build and cache
+dist/
+build/
+.cache/
+.firebase/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo

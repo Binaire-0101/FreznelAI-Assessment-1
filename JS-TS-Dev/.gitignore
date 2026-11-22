@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+.env
+.env.*
+!.env.example
+.firebase/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
